@@ -1,8 +1,12 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.models.url import Url
+from app.repositories.url_repo import UrlRepository
+
 
 class UnitOfWork:
     def __init__(self, session: AsyncSession) -> None:
+        self.url_repo = UrlRepository(session, Url)
         self.session = session
 
     async def __aenter__(self) -> UnitOfWork:

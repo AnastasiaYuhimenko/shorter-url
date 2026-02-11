@@ -18,9 +18,9 @@ class Settings(BaseSettings):
     POSTGRES_DB: str
     POSTGRES_HOST: str
     POSTGRES_PORT: str
-    REDIS_PORT: str
-    REDIS_HOST: str
-    SECURE: int
+    # REDIS_PORT: str
+    # REDIS_HOST: str
+    # SECURE: int
     REFRESH_TOKEN_EXPIRE_DAYS: int = 15
 
     @property

@@ -5,7 +5,7 @@ from app.db.base import Base
 from alembic import context
 from app.core.config import settings
 from sqlalchemy import create_engine
-# from app.models.users import *
+from app.models.url import Url
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

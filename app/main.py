@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.routers.v1 import urls
 
 app = FastAPI(
     title="URL-Shorter",
@@ -22,3 +23,6 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+
+app.include_router(urls.router, prefix="/api/v1")
